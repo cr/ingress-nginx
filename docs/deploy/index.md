@@ -25,11 +25,10 @@
 
 !!! attention
     If you're using GKE you need to initialize your user as a cluster-admin with the following command:
-    ```console
-    kubectl create clusterrolebinding cluster-admin-binding \
-      --clusterrole cluster-admin \
-      --user $(gcloud config get-value account)
-    ```
+
+```console
+kubectl create clusterrolebinding cluster-admin-binding --clusterrole cluster-admin --user $(gcloud config get-value account)
+```
 
 The following **Mandatory Command** is required for all deployments except [minikube](#minikube).
 
